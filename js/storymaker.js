@@ -20,6 +20,7 @@ const settingDisplay = document.querySelector('#choosenSetting');
 const showButton = document.querySelector('#playback');
 const randomButton = document.querySelector('#random');
 const storyOutput = document.querySelector('#story');
+const studentInfo = document.querySelector('#studentId');
 
 // Variables for pre-defined arrays
 let nouns1 = ['The Turkey', 'Mom', 'Dad', 'The Dog', 'My Teacher', 'The Elephant', 'The Cat'];
@@ -40,10 +41,13 @@ let settingCount = 0;
 -------------------------------------------------- */
 function noun1_on_click() {
     // variable to get array element and displaying it
+    // grab the noun from the array using noun count
     let noun1 = nouns1[noun1Count];
-    console.log(noun1);
+    // set the noun to the display
     noun1Display.textContent = noun1;
     // if-else to change count setting
+    // then if the count is less than the length of the array, increment the count
+    // else set the count back to 0
     if (noun1Count < nouns1.length - 1) {
         noun1Count++;
     } else {
@@ -52,11 +56,12 @@ function noun1_on_click() {
 }
 
 function verb_on_click() {
-    // variable to get array element and displaying it
+    // very similar to the noun function
+    // grab the verb from the array using verb count
     let verb = verbs[verbCount];
-    console.log(verb);
+    //  display the verb
     verbDisplay.textContent = verb;
-    // if-else to change count setting
+    // increment or reset the count
     if (verbCount < verbs.length - 1) {
         verbCount++;
     } else {
@@ -65,11 +70,9 @@ function verb_on_click() {
 }
 
 function adjective_on_click() {
-    // variable to get array element and displaying it
+    // same as above but for adjectives
     let adjective = adjectives[adjectiveCount];
-    console.log(adjective);
     adjectiveDisplay.textContent = adjective;
-    // if-else to change count setting
     if (adjectiveCount < adjectives.length - 1) {
         adjectiveCount++;
     } else {
@@ -78,11 +81,9 @@ function adjective_on_click() {
 }
 
 function noun2_on_click() {
-    // variable to get array element and displaying it
+    // same as above but for nouns2
     let noun2 = nouns2[noun2Count];
-    console.log(noun2);
     noun2Display.textContent = noun2;
-    // if-else to change count setting
     if (noun2Count < nouns2.length - 1) {
         noun2Count++;
     } else {
@@ -91,11 +92,9 @@ function noun2_on_click() {
 }
 
 function setting_on_click() {
-    // variable to get array element and displaying it
+    // same as above but for settings
     let setting = settings[settingCount];
-    console.log(setting);
     settingDisplay.textContent = setting;
-    // if-else to change count setting
     if (settingCount < settings.length - 1) {
         settingCount++;
     } else {
@@ -105,24 +104,34 @@ function setting_on_click() {
 
 // concatenate the user story and display
 function playback_on_click() {
+    // grab the text content of each p tag and concatenate them
     let story = noun1Display.textContent + ' ' + verbDisplay.textContent + ' ' + adjectiveDisplay.textContent + ' ' + noun2Display.textContent + ' ' + settingDisplay.textContent;
+    // display the story
     storyOutput.textContent = story;
 }
 
 // grabbing random element from arrays, concatenate and display
 function random_on_click() {
+    // get a random index for each array
     let randomIndex1 = Math.floor(Math.random() * 7);
     let randomIndex2 = Math.floor(Math.random() * 6);
     let randomIndex3 = Math.floor(Math.random() * 6);
     let randomIndex4 = Math.floor(Math.random() * 7);
     let randomIndex5 = Math.floor(Math.random() * 6);
+    // concatenate the random elements
     let story = nouns1[randomIndex1] + ' ' + verbs[randomIndex2] + ' ' + adjectives[randomIndex3] + ' ' + nouns2[randomIndex4] + ' ' + settings[randomIndex5];
+    // display the story
     storyOutput.textContent = story;
+
+    // display my student information
+    studentInfo.textContent = 'Name: Kai Thompson | Lakehead ID: 1284787 | Georgian ID: 200628520';
+
 
 }
 
 /* Event Listeners
 -------------------------------------------------- */
+// add event listeners to each button
 noun1Button.addEventListener('click', noun1_on_click);
 verbButton.addEventListener('click', verb_on_click);
 adjectiveButton.addEventListener('click', adjective_on_click);

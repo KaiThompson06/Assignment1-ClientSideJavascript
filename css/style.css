@@ -1,3 +1,4 @@
+/* add some basic styling for the whole page, set the backdrop to a gray */
 body {
     font-family: Arial, sans-serif;
     background-color: grey;
@@ -5,10 +6,10 @@ body {
     padding: 0;
 }
 
-
+/* make the heading text have a nice blue box w/ rounded corners and centered in the page */
 h1 {
     background-color: rgb(103, 255, 255);
-    margin: 25px 15%;
+    margin: 5px 15%;
     padding: 10px;
     text-align: center;
     font-size: 3em;
@@ -16,42 +17,82 @@ h1 {
 }
 
 section {
+    /* add a nice cusion between the sections and the edges of the frames */
     margin: 25px 15%;
     padding: 10px;
+    /* a brighter gray so it stands out from the background */
     background-color: rgba(255, 255, 255, 0.849);
+    /* rounded corners and centering all items(buttons) */
     border-radius:15px;
     align-items: center;
     justify-content: center;
 }
-
-section h2, section p {
+/* for the student ID p */
+body > p {
+    /* center text */
     text-align: center;
-    margin: 0px 0 10px;
+    /* set the background color the same as the h1 */
+    background-color: rgb(103, 255, 255);
+    /* delare a height, so the element doesn't change when text is added */
+    height: 1.2em;
+    /* add some padding*/
+    padding: 10px;
+    /* set the margin to 0 on the top and bottom, 15% on the sides */
+    margin: 0 15%;
+    /* rounded corners */
+    border-radius: 15px;
+    /* make the text slightly bigger */
+    font-size: 1.2em;
+    
+}
+
+/* for the secondary heading and the other paragraphs */
+section h2, p {
+    /* center text,  */
+    text-align: center;
+    /* set the margin so that there is only a gap at the bottoms */
+    margin: 0 0 10px;
+    /* set a static height so that it doesnt change when the text is added */
     height: 1em;
 }
+/* some additional styling for the heading2 */
 section h2 {
+    /* make the text bigger */
     font-size: 2em;
+    /* add some margin to top and bottom */
     margin: 10px 0 20px;
 }
-
+/* styling for the buttons */
 section button {
+    /* scale the buttons and ensure they are centered */
     width: 15%;
     margin: 10px 42.5%;
+    /* a little bit of padding */
     padding: 5px;
+    /* remove the black border and round the corners */
     border: none;
     border-radius: 5px;
+    /* set the bg color to a dim green and the text white */
     background-color: rgb(85, 145, 122);
     color: white;
+    /* make the text a little bigger and bolder */
     font-size: 1.2em;
     font-weight: bold;
+    /* a little bit of user feedback whe hovering over the buttons */
     cursor: pointer;
 }
 
+/* styling for the story section */ 
 #story {
+    /* set the background color to a light blue */
     background-color: rgb(103, 255, 255);
+    /* add some padding */
     padding: 15px;
+    /* center in the element */
     margin: 0 25%;
+    /* rounded corners */
     border-radius: 25px;
+    /* make the font a bit bigger and bolder */
     font-size: 1.2em;
     font-weight: bold;
 }
