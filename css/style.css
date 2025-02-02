@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    background-color: rgb(103, 255, 255);
+    margin: 25px 15%;
+    padding: 10px;
+    text-align: center;
+    font-size: 3em;
+    border-radius: 15px;
+}
+
+section {
+    margin: 25px 15%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.849);
+    border-radius:15px;
+    align-items: center;
+    justify-content: center;
+}
+
+section h2, section p {
+    text-align: center;
+    margin: 0px 0 10px;
+    height: 1em;
+}
+section h2 {
+    font-size: 2em;
+    margin: 10px 0 20px;
+}
+
+section button {
+    width: 15%;
+    margin: 10px 42.5%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(85, 145, 122);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#story {
+    background-color: rgb(103, 255, 255);
+    padding: 15px;
+    margin: 0 25%;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
